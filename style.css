@@ -1,0 +1,115 @@
+/* Selector general*/
+*{
+	box-sizing: border-box; /*para que respete el ancho*/
+}
+
+body{
+	font-family: "Arial";
+	font-size: 15px;
+}
+
+a{     /*para poder cambiar el color a este elemento, debo seleccionarlo ya que actua de manera independiente*/
+	display: inline-block; /*respere el alto y ancho*/
+}
+
+/*Selector de tipo nombre de etiqueta*/
+p{
+	color: black;    /*Propiedad:  valor de la propiedad;*/
+}
+
+header{
+	padding: 15px 0 15px 0;  /*espacio hacia adentro del elemento*/
+	position: fixed; /*para que el menú te persiga, se mantiene fijo*/
+	top: 0;
+	left: 0;
+	z-index: 2;   /*para posicionar header encima de la siguiente sección*/
+	background-color: white;
+	width: 100%;
+}
+
+header .container{
+	display: flex;  /*para aprovechar el espacio que tiene el elemento*/
+	justify-content: space-between; 
+	align-items: center;
+}
+
+header .container .logo{
+	width: 50px;  
+}
+
+header .container nav a{
+	color: black;
+	text-decoration: none;  /*quitar las lineas al texto*/
+	margin: 0 15px 0 15px;  /*espacio hacia afuera del elemento*/
+}
+
+/*Selector de tipo clase*/
+.seccion{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.cuadrado-perfecto{    /*esta clase se usa para estandarizar el tamaño de las imagenes que coloquemos en la sección*/
+	width: 100%;
+	padding-bottom: 100%;
+	position: relative;
+}
+
+.cuadrado-perfecto img{    /*esta clase se usa para estandarizar el tamaño de las imagenes que coloquemos en la sección*/
+	width: 100%;
+	height: 100%;
+	object-fit: cover;  /*solo funciona para etiquetas img y video, es una especie de background-size y tiene valor cover*/
+	object-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.container{
+	width: 1140px;
+	margin: 0 auto 0 auto;  /*margin trabaja de zona horaria, el primer elemento es el de arriba, el siguiente es el de la derecha, enseguda el de abajo y por último el de la isquierda*/
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap; /*si una de las columnas no alcanza en el espacio, se va abajo (al agregar "nowrap" entran porque entran)*/
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.columna{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.columna-33{
+	width: 33.33%;
+}
+
+/*Selector de tipo id (es específico)*/
+#speakers .bloque-speaker{
+	border: 1px solid grey;
+}
+
+#speakers .bloque-speaker .bloque-img-speaker{
+
+}
+
+#speakers .bloque-speaker .bloque-img-speaker img{
+	width: 100%;
+}
+
+#speakers .bloque-speaker .bloque-img-speaker .cuadrado-perfecto{
+	padding-bottom: 56.25%;
+}
+
+#speakers .bloque-speaker .bloque-contenido-speaker{
+	padding: 15px;
+}
+
+#speakers .bloque-speaker .bloque-contenido-speaker h3{
+	margin-top: 0;
+	font-size: 25px;
+}
